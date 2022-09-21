@@ -10,16 +10,19 @@
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"); */
     </style>
   </head>
   <body>
+    <button class="knob" onclick="toggleMenu()">+</button>
+
     <aside class="menu">
 
         <h3 class="logo">
-            <span class="logo__icon">
-                <i class="las la-ribbon"></i>
-            </span>
+            <button class="logo__icon">
+                <!-- <i class="las la-ribbon"></i> -->
+            </button>
            <span class="logo__text">
             memo
            </span>
@@ -28,7 +31,7 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link" href="">
+                    <a class="nav__link nav__link-aktiv" href="">
                         <span class="nav__icon">
                             <i class="lab la-discourse"></i>
                         </span>
@@ -113,10 +116,11 @@
             <header class="header">
                 <section class="header-inside">
                     <span class="foto">
-                        <i class="las la-user-tie"></i>
+                        <img class="header__img" src="./picture-for-projekt/avatar.png" alt="">
+                        <!-- <i class="las la-user-tie"></i> -->
                     </span>
                     <span class="Personaldata">
-                        <h3 class="Personaldata--intelligence name">Leslie Alexandra</h3>
+                        <h2 class="Personaldata--intelligence name">Leslie Alexandra</h2>
                         <h5 class="Personaldata--intelligence location">Los Angeles, CA</h5>
                     </span>
                 </section>
@@ -142,7 +146,7 @@
                     <div class="home__nav">
                         <ul class="home__ul">
                             <li class="home__ul-text">
-                                <a href="" class="home__ul-text">All</a>
+                                <a href="" class="home__ul-text home__ul-text-all">All</a>
                             </li>
                             <li class="home__ul-text">
                                 <a href="" class="home__ul-text">Current</a>
@@ -161,11 +165,11 @@
             <div class="home__picture">
 
                 <div class="forpicture">
-                    <button class="twobutton twobutton-picture-oop">
+                    <button class="twobutton twobutton-picture twobutton-picture-oop">
                     </button>
                     <button class="twobutton twobutton-text">
                         <p class="prog-date">
-                            Programming  Oct 09, 2022
+                            Programming · Oct 09, 2022
                         </p>
                         <p class="twobutton-picture-theme">
                             Objekt-Oriented Programming in Java
@@ -176,16 +180,14 @@
                 <div class="forpicture">
                     <button class="onebutton onebutton-picture">
                         <p class="twobutton-picture-theme">
-                            How to track your course progress easily?
                         </p>
-                        <a href="" class="onebutton-picture-a">Find more ></a>
+                        <!-- <a href="" class="onebutton-picture-a">Find more ></a> -->
                     </button>
                 </div>
 
                 <div class="forpicture">
-                    <button class="twobutton twobutton-picture-flowcast">
+                    <button class="twobutton twobutton-picture twobutton-picture-flowcast">
                         <p class="twobutton-picture-theme twobutton-picture-theme.white">
-                            flowcast
                         </p>
                     </button>
                     <button class="twobutton twobutton-text">
@@ -199,7 +201,7 @@
                 </div>
 
                 <div class="forpicture">
-                    <button class="twobutton twobutton-picture-for">
+                    <button class="twobutton twobutton-picture twobutton-picture-for">
 
                     </button>
                     <button class="twobutton twobutton-text">
@@ -213,9 +215,163 @@
                 </div>
 
             </div>
-
         </section>
-        <section class="schedule"></section>
+         <div class="timetable">
+                <span class="timetable__hat">
+                    <h2 class="Schedule">Schedule</h2>
+                    <button class="month">
+                        Month
+                        <i class="las la-angle-down"></i>
+                    </button>
+                </span>
+                <ul class="calendar">
+                    <li class="calendar__item calendar__item--small">Sun</li>
+                    <li class="calendar__item calendar__item--small">Mon</li>
+                    <li class="calendar__item calendar__item--small">Tue</li>
+                    <li class="calendar__item calendar__item--small">Wed</li>
+                    <li class="calendar__item calendar__item--small">Thu</li>
+                    <li class="calendar__item calendar__item--small">Fri</li>
+                    <li class="calendar__item calendar__item--small">Sat</li>
+                    <li class="calendar__item calendar__item--grey">26</li>
+                    <li class="calendar__item calendar__item--grey">27</li>
+                    <li class="calendar__item calendar__item--grey">28</li>
+                    <li class="calendar__item calendar__item--grey">29</li>
+                    <li class="calendar__item calendar__item--grey">30</li>
+                    <li class="calendar__item">1</li>
+                    <li class="calendar__item">2</li>
+                    <li class="calendar__item">3</li>
+                    <li class="calendar__item">4</li>
+                    <li class="calendar__item">5</li>
+                    <li class="calendar__item calendar__item--aktive">6</li>
+                    <li class="calendar__item">7</li>
+                    <li class="calendar__item">8</li>
+                    <li class="calendar__item">9</li>
+                    <li class="calendar__item">10</li>
+                    <li class="calendar__item">11</li>
+                    <li class="calendar__item">12</li>
+                    <li class="calendar__item">13</li>
+                    <li class="calendar__item">14</li>
+                    <li class="calendar__item">15</li>
+                    <li class="calendar__item">16</li>
+                    <li class="calendar__item">17</li>
+                    <li class="calendar__item">18</li>
+                    <li class="calendar__item">19</li>
+                    <li class="calendar__item">20</li>
+                    <li class="calendar__item">21</li>
+                    <li class="calendar__item">22</li>
+                    <li class="calendar__item">23</li>
+                    <li class="calendar__item">24</li>
+                    <li class="calendar__item">25</li>
+                    <li class="calendar__item">26</li>
+                    <li class="calendar__item">27</li>
+                    <li class="calendar__item">28</li>
+                    <li class="calendar__item">29</li>
+                    <li class="calendar__item">30</li>
+                </ul>
+                <div class="upc">
+                    <h3>Upcoming</h3>
+                    <div class="timeline">
+
+                        <div class="lesson Picture-one">
+                            <!-- <img class="lesson__picture" src="./picture-for-projekt/1.png" alt=""> -->
+                        </div>
+
+                        <div class="lesson Picture-two">
+                            <!-- <img class="lesson__picture" src="./picture-for-projekt/2.png" alt=""> -->
+                        </div>
+                        
+                        <div class="lesson Picture-three">
+                            <!-- <img class="lesson__picture" src="./picture-for-projekt/3.png" alt=""> -->
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">09:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">09:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">10:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">10:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">11:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">11:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">12:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">12:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">13:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">13:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">14:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">14:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">15:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">15:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">16:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__item">16:30</div>
+                            <div class="timeline__line"></div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__item">17:00</div>
+                            <div class="timeline__line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+    <script>
+        function toggleMenu(){
+            var menu = document.querySelector('.menu');
+            var knob = document.querySelector('.knob');
+
+            menu.classList.toggle('menu--open');
+            knob.classList.toggle('knob--open');
+        }
+    </script>
   </body>
 </html>
